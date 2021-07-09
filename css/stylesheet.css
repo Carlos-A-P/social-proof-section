@@ -1,0 +1,219 @@
+:root {
+	/* Primary */
+	--dark-magenta: hsl(300, 43%, 22%);
+	--soft-pink: hsl(333, 80%, 67%);
+	/* Neutral */
+	--dark-gray-magenta: hsl(303, 10%, 53%);
+	--light-grey-magenta: hsl(300, 24%, 96%);
+}
+
+html {
+	box-sizing: border-box;
+	font-family: "Spartan", sans-serif;
+}
+
+body {
+	margin: 0;
+	background-image: url(../images/bg-pattern-top-desktop.svg),
+		url(../images/bg-pattern-bottom-desktop.svg);
+	background-position: right 50vw top 0, left 55vw bottom 0;
+	background-repeat: no-repeat;
+}
+
+main {
+	padding: 30px;
+}
+
+.wrapper {
+	max-width: 500px;
+	margin: 0 auto 3rem;
+	display: grid;
+	grid-template-areas:
+		"box-1"
+		"box-2"
+		"box-3";
+}
+/* b1 */
+.box-1 {
+	grid-area: box-1;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 15px;
+	margin-bottom: 1rem;
+}
+
+h1 {
+	color: var(--dark-magenta);
+	font-weight: 800;
+	font-size: 2rem;
+}
+/* end */
+/* b2 */
+.box-2 {
+	grid-area: box-2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.rate {
+	background-color: var(--light-grey-magenta);
+	min-width: 100%;
+	padding: 0.7rem 0;
+	margin-bottom: 1rem;
+	border-radius: 0.4rem;
+}
+
+.stars img {
+	margin: 0 2px;
+}
+
+h2 {
+	font-size: 14px;
+	font-weight: bold;
+	color: var(--dark-magenta);
+	margin: 12px 0 0;
+}
+/* end */
+/* b3 */
+.box-3 {
+	grid-area: box-3;
+	margin-top: 1rem;
+}
+
+.card {
+	background-color: var(--dark-magenta);
+	color: var(--light-grey-magenta);
+	padding: 2.5rem 2rem;
+	margin-top: 1rem;
+	border-radius: 0.4rem;
+}
+
+.top {
+	display: flex;
+	height: 50px;
+}
+
+.name,
+.verified-text {
+	margin: 0 0 7px 27px;
+}
+
+.name {
+	font-weight: bold;
+}
+
+.pic {
+	border-radius: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+.verified-text {
+	color: var(--soft-pink);
+}
+
+.quote {
+	margin-top: 1.5rem;
+	line-height: 1.5rem;
+}
+
+/* end */
+.footer {
+	font-size: 11px;
+	text-align: center;
+}
+.footer a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+	body {
+		background-image: url(../images/bg-pattern-top-mobile.svg),
+			url(../images/bg-pattern-bottom-mobile.svg);
+		background-position: center top 0, center bottom 0;
+	}
+}
+
+@media (min-width: 1300px) {
+	main {
+		height: 100vh;
+		padding-top: 5rem;
+	}
+
+	.wrapper {
+		max-width: 1200px;
+		grid-template-areas:
+			"box-1 box-2"
+			"box-3 box-3";
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	/* b1 */
+	.box-1 {
+		text-align: left;
+	}
+
+	h1 {
+		font-size: 3.4rem;
+		padding-right: 4rem;
+		margin-bottom: 10px;
+	}
+
+	.box-1 p {
+		margin-top: 10px;
+		padding-right: 7rem;
+	}
+	/* end */
+	/* b2 */
+	.rate {
+		display: flex;
+		min-width: 400px;
+		padding: 1rem 3.5rem 1rem 0.5rem;
+		justify-content: space-around;
+	}
+
+	.rating-1 {
+		align-self: flex-start;
+	}
+
+	.rating-2 {
+		align-self: center;
+	}
+
+	.rating-3 {
+		align-self: flex-end;
+	}
+
+	h2,
+	.stars {
+		margin: auto;
+	}
+	/* end */
+	/* b3 */
+	.box-3 {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.card {
+		max-width: 320px;
+		padding: 2rem;
+	}
+
+	.person-1 {
+		align-self: flex-start;
+	}
+
+	.person-2 {
+		align-self: center;
+	}
+
+	.person-3 {
+		align-self: flex-end;
+	}
+	/* end */
+}
