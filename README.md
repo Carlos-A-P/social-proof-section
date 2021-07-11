@@ -1,4 +1,4 @@
-# 3-column preview card component
+# Social proof section
 
 - Live website -(https://carlospwd-social-proof-section.netlify.app/)
 
@@ -29,6 +29,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- Grid
 
 ### What I learned
 
